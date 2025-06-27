@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",               // Root directory is the current folder (usually your project root)
+    "paths": {
+      "@/*": ["./src/*"]          // Anything imported as "@/..." maps to ./src/...
+    }
+  }
+}
