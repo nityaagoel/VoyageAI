@@ -1,6 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
-/* eslint-disable react/jsx-key */
 import React from 'react'
 import PlaceCardItem from './PlaceCardItem'
 
@@ -15,11 +12,10 @@ function PlacesToVisit({ trip }) {
               <h3 className='font-medium text-lg'>{day}</h3>
               <p className='font-medium text-sm text-orange-300'>{info.best_time_to_visit}</p>
               <div className='grid md:grid-cols-2 gap-5'>
-                {info.places.map((place, index) => (
-                  <div key={index}>                   
-                    {/* <h2 className='font-normal text-md'>{place.placeName}</h2> */}
+                {Object.entries(info.places).map(([placeName, placeDetails]) => (
+                  <div key={placeName}>
                     <div className='my-3'>
-                       <PlaceCardItem place={place} />
+                      <PlaceCardItem place={placeDetails} />
                     </div>
                   </div>
                 ))}
