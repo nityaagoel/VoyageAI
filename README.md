@@ -1,12 +1,49 @@
-# React + Vite
+# 🌍 Voyage AI - AI-Powered Travel Planner
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Voyage AI is an intelligent travel planning web application that helps users generate personalized travel itineraries using Google Gemini AI, Google Places API, and user preferences. With seamless Google authentication and a user-friendly interface, it makes trip planning efficient, smart, and fun.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- 🔐 **Google Authentication**: Secure login/signup with Google OAuth 2.0.
+- 🧠 **AI Trip Planning**: Personalized trip generation using Google Gemini AI.
+- 📍 **Location Search**: Integrated with Google Places Autocomplete for selecting destinations.
+- 💰 **Budget & Preferences Input**: Choose your budget, number of travelers, and trip type.
+- 🗺️ **My Trips Dashboard**: View saved trips with details and images.
+- 📸 **Dynamic Image Fetching**: Location images auto-fetched and displayed in trip cards.
+- 🧾 **Trip Summary Dialog**: Shows AI-generated trip details in a popup before saving.
+- ✅ **Form Validation & Feedback**: User-friendly alerts and validations.
+- 🪄 **Smooth UI/UX**: Built with modern design and reusable React components.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 💼 Use Cases
+
+- **Students & Backpackers**: Plan budget-friendly weekend getaways.
+- **Families**: Organize multi-day vacations based on group size and interests.
+- **Professionals**: Quickly find short travel breaks based on availability.
+- **Solo Travelers**: Discover new destinations with personalized recommendations.
+- **Developers**: Explore how to integrate AI + Google APIs in real-world applications.
+
+---
+
+## 🧰 Tech Stack
+
+### Frontend
+- React (v19+)
+- React Router
+- Vite
+- Google Places Autocomplete
+- Google OAuth
+- Tailwind CSS / Custom CSS Modules
+
+### Backend
+- Firebase Firestore (for saving user trips)
+- Firebase Auth (Google Sign-In)
+- Google Gemini AI API (Gemini 2.5 Flash)
+
+---
+
+## ⚙️ Setup Instructions
+i

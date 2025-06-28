@@ -45,31 +45,32 @@ function Header() {
   }, []);
 
   return (
-    <div className='p-1 shadow-sm flex justify-between items-center px-3'>
+    <div className='p-3 shadow-sm flex justify-between items-center px-5'>
       <img
         src='./src/assets/logo1.png'
         alt='Logo'
         className='h-20 w-auto'
       />
-      <div className='flex gap-3'>
-        <Button  varient="outline" className='rounded-full'
+      
+      <div className='flex items-center gap-3'>
+        <Button className='bg-gradient-to-r from-[#382f98] to-blue-600 hover:from-blue-600 hover:to-purple-600 text-white px-7 py-4 text-xl font-bold rounded-full shadow-2xl hover:shadow-purple-500/25 transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 ease-out border-0 relative overflow-hidden group'
                 onClick={() => navigate('/')}>
                 About Us 
-              </Button>
-        <Button  varient="outline" className='rounded-full'
+        </Button>
+        <Button className='bg-gradient-to-r from-[#382f98] to-blue-600 hover:from-blue-600 hover:to-purple-600 text-white px-7 py-4 text-xl font-bold rounded-full shadow-2xl hover:shadow-purple-500/25 transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 ease-out border-0 relative overflow-hidden group'
                 onClick={() => navigate('/create-trip')}>
                 + Create Trip
-              </Button>
+        </Button>
         <div>
           {user ? (
-            <div className='flex items-center gap-5'>
-              <Button  varient="outline" className='rounded-full'
+            <div className='flex items-center gap-3'>
+              <Button className='bg-gradient-to-r from-[#382f98] to-blue-600 hover:from-blue-600 hover:to-purple-600 text-white px-7 py-4 text-xl font-bold rounded-full shadow-2xl hover:shadow-purple-500/25 transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 ease-out border-0 relative overflow-hidden group'
                 onClick={() => navigate('/my-trips')}>
                 My Trips
               </Button>
 
               <Popover>
-                <PopoverTrigger>
+                <PopoverTrigger className='flex items-center'>
                   <img src={user?.picture} className='h-[35px] w-[35px] rounded-full' />
                 </PopoverTrigger>
                 <PopoverContent>
@@ -90,13 +91,13 @@ function Header() {
           <DialogContent>
             <DialogHeader>
               <DialogDescription>
-                <img src="./src/assets/logo1.png" />
+                <img src="./src/assets/logo1.png" className='mx-auto mb-4' />
                 <h2 className='font-bold text-lg mt-7'>Sign in With Google</h2>
                 <p>Sign in to the App with Google Authentication Security</p>
                 <Button
                   onClick={login}
-                  className="w-full mt-5 gap-4 items-center">
-                  <FcGoogle className='h-1 w-7' />
+                  className="w-full mt-5 flex gap-4 items-center justify-center">
+                  <FcGoogle className='h-5 w-5' />
                   Sign in with Google
                 </Button>
               </DialogDescription>

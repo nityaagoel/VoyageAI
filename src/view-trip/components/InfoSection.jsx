@@ -41,29 +41,38 @@ function InfoSection({ trip }) {
         alt="Destination"
       />
 
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mt-5">
-        <div className="flex flex-col gap-2">
-          <h2 className="font-bold text-lg sm:text-xl md:text-2xl mt-2 sm:mt-0">
+      <div className="mt-5">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
+          <h2 className="font-bold text-lg sm:text-xl md:text-2xl">
             {trip?.userSelection?.location?.label}
           </h2>
-          <div className="flex flex-wrap gap-3 sm:gap-5 mt-2">
-            <h2 className="p-1 px-3 bg-gray-200 rounded-full text-gray-500 text-xs md:text-sm">
-              📆 {trip?.userSelection?.noOfDays} Day
-            </h2>
-            <h2 className="p-1 px-3 bg-gray-200 rounded-full text-gray-500 text-xs md:text-sm">
-              💰 {trip?.userSelection?.budget} Budget
-            </h2>
-            <h2 className="p-1 px-3 bg-gray-200 rounded-full text-gray-500 text-xs md:text-sm">
-              💏 No. of traveler: {trip?.userSelection?.traveler}
-            </h2>
-          </div>
+          
+          {/* Share Button - aligned with title */}
+          <Button 
+            size="lg" 
+            className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-md hover:shadow-lg transition-all mt-2 sm:mt-0"
+          >
+            <FaShare className="text-sm" />
+            <span className="hidden sm:inline text-sm font-medium">Share</span>
+          </Button>
         </div>
-        <Button className="mt-3 sm:mt-0 sm:ml-5">
-          <FaShare />
-        </Button>
+        
+        {/* Tags row */}
+        <div className="flex flex-wrap gap-2 sm:gap-3">
+          <span className="p-2 px-3 bg-gray-200 rounded-full text-gray-600 text-xs md:text-sm font-medium">
+            📆 {trip?.userSelection?.noOfDays} Day{trip?.userSelection?.noOfDays > 1 ? 's' : ''}
+          </span>
+          <span className="p-2 px-3 bg-gray-200 rounded-full text-gray-600 text-xs md:text-sm font-medium">
+            💰 {trip?.userSelection?.budget} Budget
+          </span>
+          <span className="p-2 px-3 bg-gray-200 rounded-full text-gray-600 text-xs md:text-sm font-medium">
+            👥 {trip?.userSelection?.traveler} Traveler{trip?.userSelection?.traveler > 1 ? 's' : ''}
+          </span>
+        </div>
       </div>
     </div>
   );
 }
 
 export default InfoSection;
+
