@@ -46,4 +46,15 @@ Voyage AI is an intelligent travel planning web application that helps users gen
 ---
 
 ## ⚙️ Setup Instructions
-i
+Install Dependencies
+  -npm install
+Create .env file
+  -VITE_GOOGLE_PLACE_API_KEY = your api key 
+  -VITE_GOOGLE_GEMINI_API_KEY = your api key 
+  -VITE_GOOGLE_OUTH_CLIENT_ID = your api key 
+Start the Dev Server
+  -npm run dev
+Required Packages
+  -npm install react-router-dom firebase react-google-places-autocomplete react-icons sonner
+  -npm install @google/generative-ai
+   
