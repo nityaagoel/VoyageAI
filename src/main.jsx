@@ -8,7 +8,7 @@ import App from './App.jsx';
 import CreateTrip from './create-trip/index.jsx';
 import ViewTrip from './view-trip/[tripId]/index.jsx';
 import MyTrips from './my-trips/index.jsx';
-import Layout from './components/layout/Layout.jsx';
+import Layout from './components/layout/layout.jsx';
 
 const router = createBrowserRouter([
   {
