@@ -3,8 +3,9 @@ import PlaceCardItem from './PlaceCardItem'
 
 function PlacesToVisit({ trip }) {
   return (
-    <div>
-      <h2 className='font-bold text-lg mt-10 mb-7'>Places to Visit</h2>
+    <div className="mx-4 sm:mx-6 lg:mx-8 max-w-7xl xl:mx-auto">
+  <h2 className='font-bold text-2xl mt-10 mb-7'>Places to Visit</h2>
+
       <div>
         {trip.tripData && typeof trip.tripData.itinerary === 'object' ? (
           Object.entries(trip.tripData.itinerary).map(([day, info]) => (

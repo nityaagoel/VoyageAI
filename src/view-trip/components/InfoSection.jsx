@@ -41,33 +41,33 @@ function InfoSection({ trip }) {
         alt="Destination"
       />
 
-      <div className="mt-5">
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
+      <div className="flex flex-col sm:flex-row justify-between items-start mt-5 gap-4">
+        <div className="flex flex-col gap-2 flex-1">
           <h2 className="font-bold text-lg sm:text-xl md:text-2xl">
             {trip?.userSelection?.location?.label}
           </h2>
-          
-          {/* Share Button - aligned with title */}
+          <div className="flex flex-wrap gap-2 sm:gap-3">
+            <span className="p-2 px-3 bg-gray-200 rounded-full text-gray-600 text-xs md:text-sm font-medium">
+              📆 {trip?.userSelection?.noOfDays} Day{trip?.userSelection?.noOfDays > 1 ? 's' : ''}
+            </span>
+            <span className="p-2 px-3 bg-gray-200 rounded-full text-gray-600 text-xs md:text-sm font-medium">
+              💰 {trip?.userSelection?.budget} Budget
+            </span>
+            <span className="p-2 px-3 bg-gray-200 rounded-full text-gray-600 text-xs md:text-sm font-medium">
+              👥 {trip?.userSelection?.traveler} Traveler{trip?.userSelection?.traveler > 1 ? 's' : ''}
+            </span>
+          </div>
+        </div>
+        
+        {/* Share Button - properly aligned */}
+        <div className="flex-shrink-0 self-start sm:self-center">
           <Button 
             size="lg" 
-            className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-md hover:shadow-lg transition-all mt-2 sm:mt-0"
+            className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-md hover:shadow-lg transition-all"
           >
             <FaShare className="text-sm" />
             <span className="hidden sm:inline text-sm font-medium">Share</span>
           </Button>
-        </div>
-        
-        {/* Tags row */}
-        <div className="flex flex-wrap gap-2 sm:gap-3">
-          <span className="p-2 px-3 bg-gray-200 rounded-full text-gray-600 text-xs md:text-sm font-medium">
-            📆 {trip?.userSelection?.noOfDays} Day{trip?.userSelection?.noOfDays > 1 ? 's' : ''}
-          </span>
-          <span className="p-2 px-3 bg-gray-200 rounded-full text-gray-600 text-xs md:text-sm font-medium">
-            💰 {trip?.userSelection?.budget} Budget
-          </span>
-          <span className="p-2 px-3 bg-gray-200 rounded-full text-gray-600 text-xs md:text-sm font-medium">
-            👥 {trip?.userSelection?.traveler} Traveler{trip?.userSelection?.traveler > 1 ? 's' : ''}
-          </span>
         </div>
       </div>
     </div>
@@ -75,4 +75,3 @@ function InfoSection({ trip }) {
 }
 
 export default InfoSection;
-

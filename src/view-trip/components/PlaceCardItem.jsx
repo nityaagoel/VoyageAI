@@ -67,3 +67,4 @@ function PlaceCardItem({ place }) {
 }
 
 export default PlaceCardItem
+

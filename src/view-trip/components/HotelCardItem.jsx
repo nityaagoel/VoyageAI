@@ -37,11 +37,12 @@ function HotelCardItem({ item }) {
         target='_blank'
       >
         <div className='hover:scale-105 transition-all cursor-pointer'>
-          <img
-            src={photoUrl || '/road-trip-vacation.jpg'}
-            className='rounded-xl h-[180px] w-full object-cover'
-            alt={item?.hotelName}
-          />
+        <img
+          src={photoUrl || '/src/my-trips/components/placeholder.jpg'}
+          className='rounded-xl h-[240px] w-full object-cover'
+          alt={item?.hotelName}
+        />
+
           <div className='my-3 py-2'>
             <h2 className='font-medium'>{item?.hotelName}</h2>
             <h2 className='text-xs text-gray-500'>📍 {item?.hotelAddress}</h2>
