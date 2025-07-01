@@ -260,19 +260,21 @@ function CreateTrip() {
   }
 
   const SaveAiTrip = async (TripData) => {
-    setLoading(true);
-    const user = JSON.parse(localStorage.getItem("user"));
-    const docId = Date.now().toString();
-    await setDoc(doc(db, "AiTrips", docId), {
-      userSelection: formData,
-      tripData: JSON.parse(TripData),
-      userEmail: user?.email,
-      id: docId
-    });
-    setLoading(false);
-    navigate('/view-trip/' + docId);
-   
-  }
+  setLoading(true);
+  const user = JSON.parse(localStorage.getItem("user"));
+  const docId = Date.now().toString();
+
+  await setDoc(doc(db, "AiTrips", docId), {
+    userSelection: formData,
+    tripData: TripData, // ✅ no parsing
+    userEmail: user?.email,
+    id: docId
+  });
+
+  setLoading(false);
+  navigate('/view-trip/' + docId);
+};
+
 
   return (
     <div className='relative min-h-screen'>

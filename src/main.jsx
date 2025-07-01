@@ -8,24 +8,29 @@ import App from './App.jsx';
 import CreateTrip from './create-trip/index.jsx';
 import ViewTrip from './view-trip/[tripId]/index.jsx';
 import MyTrips from './my-trips/index.jsx';
-import Layout from './components/layout/layout.jsx';
-
+import Layout from './components/layout/Layout';
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Layout><App /></Layout>,
-  },
-  {
-    path: '/create-trip',
-    element: <Layout><CreateTrip /></Layout>,
-  },
-  {
-    path: '/view-trip/:tripId',
-    element: <Layout><ViewTrip /></Layout>,
-  },
-  {
-    path: '/my-trips',
-    element: <Layout><MyTrips /></Layout>,
+    element: <Layout />,
+    children: [
+      {
+        index: true, // this is for '/'
+        element: <App />,
+      },
+      {
+        path: 'create-trip',
+        element: <CreateTrip />,
+      },
+      {
+        path: 'view-trip/:tripId',
+        element: <ViewTrip />,
+      },
+      {
+        path: 'my-trips',
+        element: <MyTrips />,
+      }
+    ]
   }
 ]);
 

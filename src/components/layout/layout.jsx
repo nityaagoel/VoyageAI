@@ -1,15 +1,17 @@
+// src/components/Layout.jsx
 import React from 'react';
-import Header from '../custom/header.jsx';
-import { Toaster } from '../ui/sonner.jsx';
+import Header from '../custom/header';
+import { Outlet } from 'react-router-dom';
 
-function Layout({ children }) {
+const Layout = () => {
   return (
     <>
-      <Header />
-      <Toaster />
-      <main>{children}</main>
+      <Header /> {/* or replace with <Navbar /> if that's the intended name */}
+      <main>
+        <Outlet />
+      </main>
     </>
   );
-}
+};
 
 export default Layout;
