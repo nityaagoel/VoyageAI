@@ -75,6 +75,7 @@ function Header() {
                 </PopoverTrigger>
                 <PopoverContent>
                   <h2 className='cursor-pointer' onClick={() => {
+                    console.log("🚀 login URL:", window.location.origin);
                     googleLogout();
                     localStorage.clear();
                     window.location.reload();
