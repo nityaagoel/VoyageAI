@@ -47,7 +47,7 @@ function Header() {
   return (
     <div className='p-3 shadow-sm flex justify-between items-center px-5'>
       <img
-        src='./src/assets/logo1.png'
+        src="/logo1.png"
         alt='Logo'
         className='h-20 w-auto'
       />
